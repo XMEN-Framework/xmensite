@@ -1,0 +1,56 @@
+/*
+* Typography
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600);
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+p {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+a {
+    font-weight: 200;
+    font-size: 12px;
+}
+
+input.form-control {
+    font-weight: 200;
+    padding: 10px;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+.text-muted {
+    color: #95a2a9;
+}
+
+
+h1, h2, h3, h4, h5, h6,
+p, a, span, label,
+textarea, li,
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+select[multiple=multiple]
+{
+    font-family: 'Open Sans', sans-serif;
+}

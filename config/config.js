@@ -15,14 +15,14 @@ nconf.env(['PORT']);
 
 module.exports = {
     'development': {
-        'db': 'mongodb://localhost/xmen', //example: mongodb://localhost/my-db
+        'db': 'mongodb://localhost/xmensite', //example: mongodb://localhost/my-db
         'ROOT': rootPath,
         'PORT': 8000,
         'CONFIG_ROOT': rootPath + '/config',
         'APP_ROOT': rootPath + '/app',
         'PUBLIC_ROOT': rootPath + '/public',
         'app': {
-            'name': 'XMEN Framework - DEVELOPMENT',
+            'name': 'XMEN Framework Site - DEVELOPMENT',
             'url': 'http://localhost:8000'
         },
         'useSSL': false,
