@@ -1,0 +1,17 @@
+/*
+* Base styling for elements
+*/
+
+*,*::after, *::before {
+	box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+	padding-top: 53px;
+}

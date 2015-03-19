@@ -1,15 +1,18 @@
 //3rd Party Libraries
 @import '../lib/bourbon/app/assets/stylesheets/bourbon';
 @import '../lib/neat/app/assets/stylesheets/neat';
-
+@import '../lib/font-awesome/scss/font-awesome';
 
 //Globals
 @import 'global/colors';
 @import 'global/typography';
+@import 'global/styles';
+@import 'global/grid';
 
 
 //Partials
 @import 'partials/nav';
+@import 'partials/footer';
 
 
 //Templates

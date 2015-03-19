@@ -9,4 +9,5 @@ module.exports = function( app, passport, auth ) {
 
     //Logged in user routes.
     app.get('', frontend.home);
+    app.get('/docs', frontend.documentation);
 };

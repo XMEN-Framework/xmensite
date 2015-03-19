@@ -5,27 +5,36 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600);
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+    margin: 0;
 }
 
 p {
-    font-weight: 400;
-    font-size: 12px;
+    font-size: 16px;
+    letter-spacing: 1px;
 }
 
 a {
-    font-weight: 200;
     font-size: 12px;
+    text-decoration: none;
 }
 
 input.form-control {
-    font-weight: 200;
     padding: 10px;
 }
 
 ol {
     list-style-type: decimal;
     margin-left: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .text-muted {

@@ -1,13 +1,37 @@
 nav {
-	@include outer-container(100%);
+	background: $grey;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	.logo {
+		@include span-columns(7);
+		a {
+			padding: 10px;
+			font-size: 24px;
+			color: white;
+			display: inline-block;
+			&:hover {
+				background: lighten($grey, 10%);
+			}
+		}
+	}
 
 	ul {
+		@include span-columns(5);
+		margin: 0;
 		li {
 			display: inline-block;
 			a {
 				display: inline-block;
-				padding: 20px;
+				padding: 18px;
 				text-align: center;
+				text-decoration: none;
+				color: white;
+				&:hover {
+					background: lighten($grey, 10%);
+				}
 			}
 		}
 	}
