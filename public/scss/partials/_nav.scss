@@ -1,0 +1,14 @@
+nav {
+	@include outer-container(100%);
+
+	ul {
+		li {
+			display: inline-block;
+			a {
+				display: inline-block;
+				padding: 20px;
+				text-align: center;
+			}
+		}
+	}
+}
