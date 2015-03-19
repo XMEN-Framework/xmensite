@@ -33,11 +33,12 @@ module.exports = {
         'sslPassphrase': ''
     },
     'production': {
-        'db': '<mongodb connection>', //example: mongodb://localhost/my-db
+        'db': 'mongodb://localhost/xmensite', //example: mongodb://localhost/my-db
         'ROOT': rootPath,
         'CONFIG_ROOT': rootPath + '/config',
         'APP_ROOT': rootPath + '/app',
         'PUBLIC_ROOT': rootPath + '/public',
+        'PORT': 80,
         'app': {
             'name': 'XMEN Framework',
             'url': 'http://xmen.io'
