@@ -33,14 +33,14 @@ var config = configFile[env]; //Set the config variable to the environment setup
 var mongoose = require('mongoose');
 
 //Bootstrap DB Connection
-var db = mongoose.connect(config.db, function( err ) {
-	if ( err ) throw err;
-}).connection;
+// var db = mongoose.connect(config.db, function( err ) {
+// 	if ( err ) throw err;
+// }).connection;
 
 //Set DB connection events.
-db.on('error', function( err ) { console.log(err.message); }); //error
-db.on('open', function( ) { console.log("MongoDB connection open."); }); //open connection
-db.on('close', function( ) { console.log("MongoDB connection closed."); }); //close connection
+// db.on('error', function( err ) { console.log(err.message); }); //error
+// db.on('open', function( ) { console.log("MongoDB connection open."); }); //open connection
+// db.on('close', function( ) { console.log("MongoDB connection closed."); }); //close connection
 
 //Bootstrap Express app.
 var app = express();
