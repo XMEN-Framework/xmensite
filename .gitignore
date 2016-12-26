@@ -16,3 +16,6 @@ public/build
 .LSOverride
 .Spotlight-V100
 .Trashes
+
+/* IDE */
+.vscode/
