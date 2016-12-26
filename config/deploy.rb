@@ -20,6 +20,13 @@ set :deploy_to, "/var/app/xmen-site"
 
 # Default value for :pty is false
 # set :pty, true
+set :pty, true
+
+set :ssh_options, {
+  forward_agent: true,
+  auth_methods: ["publickey"],
+  keys: ["~/.ssh/aws-xmen.pem"]
+}
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/secrets.yml"

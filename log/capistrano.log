@@ -1,0 +1,1064 @@
+# Logfile created on 2016-12-26 09:55:22 -0500 by logger.rb/41954
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-26 09:55:22 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [499a95e5] Running /usr/bin/env mkdir -p /tmp as ubuntu@34.193.244.241
+ DEBUG [499a95e5] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-26 09:56:48 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7f2522d7] Running /usr/bin/env mkdir -p /tmp as ubuntu@34.193.244.241
+ DEBUG [7f2522d7] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-26 09:58:24 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [de1838d3] Running /usr/bin/env mkdir -p /tmp as ubuntu@34.193.244.241
+ DEBUG [de1838d3] Command: /usr/bin/env mkdir -p /tmp
+  INFO [de1838d3] Finished in 0.588 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-xmen-site-production-johntaylor.sh 0.0%
+  INFO Uploading /tmp/git-ssh-xmen-site-production-johntaylor.sh 100.0%
+  INFO [57fe198a] Running /usr/bin/env chmod 700 /tmp/git-ssh-xmen-site-production-johntaylor.sh as ubuntu@34.193.244.241
+ DEBUG [57fe198a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-xmen-site-production-johntaylor.sh
+  INFO [57fe198a] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [0f5e2d5c] Running /usr/bin/env git ls-remote --heads git@github.com:XMEN-Framework/xmensite.git as ubuntu@34.193.244.241
+ DEBUG [0f5e2d5c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-xmen-site-production-johntaylor.sh" ; /usr/bin/env git ls-remote --heads git@github.com:XMEN-Framework/xmensite.git )
+ DEBUG [0f5e2d5c] 	Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+ DEBUG [0f5e2d5c] 	
+ DEBUG [0f5e2d5c] 	6e5f4b1aebdddd86951b5a1c740122ece08e85e3
+ DEBUG [0f5e2d5c] 		
+ DEBUG [0f5e2d5c] 	refs/heads/master
+  INFO [0f5e2d5c] Finished in 0.357 seconds with exit status 0 (successful).
+  INFO [975b215f] Running /usr/bin/env mkdir -p /var/app/xmen-site/shared /var/app/xmen-site/releases as ubuntu@34.193.244.241
+ DEBUG [975b215f] Command: /usr/bin/env mkdir -p /var/app/xmen-site/shared /var/app/xmen-site/releases
+  INFO [975b215f] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [541d2c51] Running [ -f /var/app/xmen-site/current/REVISION ] as ubuntu@34.193.244.241
+ DEBUG [541d2c51] Command: [ -f /var/app/xmen-site/current/REVISION ]
+ DEBUG [541d2c51] Finished in 0.069 seconds with exit status 1 (failed).
+ DEBUG [30968a81] Running [ -f /var/app/xmen-site/repo/HEAD ] as ubuntu@34.193.244.241
+ DEBUG [30968a81] Command: [ -f /var/app/xmen-site/repo/HEAD ]
+ DEBUG [30968a81] Finished in 0.068 seconds with exit status 1 (failed).
+ DEBUG [3161df25] Running if test ! -d /var/app/xmen-site; then echo "Directory does not exist '/var/app/xmen-site'" 1>&2; false; fi as ubuntu@34.193.244.241
+ DEBUG [3161df25] Command: if test ! -d /var/app/xmen-site; then echo "Directory does not exist '/var/app/xmen-site'" 1>&2; false; fi
+ DEBUG [3161df25] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [d88a807e] Running /usr/bin/env git clone --mirror git@github.com:XMEN-Framework/xmensite.git /var/app/xmen-site/repo as ubuntu@34.193.244.241
+ DEBUG [d88a807e] Command: cd /var/app/xmen-site && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-xmen-site-production-johntaylor.sh" ; /usr/bin/env git clone --mirror git@github.com:XMEN-Framework/xmensite.git /var/app/xmen-site/repo )
+ DEBUG [d88a807e] 	Cloning into bare repository '/var/app/xmen-site/repo'...
+ DEBUG [d88a807e] 	
+ DEBUG [d88a807e] 	Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+ DEBUG [d88a807e] 	
+ DEBUG [d88a807e] 	remote: Counting objects: 158, done.[K
+ DEBUG [d88a807e] 	
+ DEBUG [d88a807e] 	remote: Compressing objects:   1% (1/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:   2% (2/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:   3% (3/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:
+ DEBUG [d88a807e] 	   4% (4/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:   5% (5/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:   6% (6/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:   7% (7/92)   [K
+ DEBUG [d88a807e] 	remote: Comp
+ DEBUG [d88a807e] 	ressing objects:   8% (8/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:   9% (9/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  10% (10/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  1
+ DEBUG [d88a807e] 	1% (11/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  13% (12/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  14% (13/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  15% (14/92)   [K
+ DEBUG [d88a807e] 	remote: Com
+ DEBUG [d88a807e] 	pressing objects:  16% (15/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  17% (16/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  18% (17/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:
+ DEBUG [d88a807e] 	  19% (18/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  20% (19/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  21% (20/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  22% (21/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  23% (22/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  25% (23/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  26% (24/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objec
+ DEBUG [d88a807e] 	ts:  27% (25/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  28% (26/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  29% (27/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  30% (28/92) 
+ DEBUG [d88a807e] 	  [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  31% (29/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  32% (30/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  33% (31/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing ob
+ DEBUG [d88a807e] 	jects:  34% (32/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  35% (33/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  36% (34/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  38% (35/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  39% (36/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  40% (37/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  41% (38/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  42% (39/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  43% (40/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  44% (41/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objec
+ DEBUG [d88a807e] 	ts:  45% (42/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  46% (43/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  47% (44/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  48% (45/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  50% (46/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  51% (47/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  52% (48/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  53% (49/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  54% (50/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  55% (51/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  56% (52/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  57% (53/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  58% (54/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  59% (55/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  60% (56/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  61% (57/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  63% (58/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  64% (59/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  65% (60/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  66% (61/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  67% (62/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  68% (63/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  69% (64/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  70% (65/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  71% (66/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  72% (67/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  73% (68/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  75% (69/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  76% (70/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  77% (71/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  78% (72/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  79% (73/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  80% (74/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  81% (75/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  82% (76/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  83% (77/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  84% (78/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  85% (79/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  86% (80/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  88% (81/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  89% (82/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  90% (83/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  91% (84/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  92% (85/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  93% (86/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  94% (87/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  95% (88/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  96% (89/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  97% (90/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects:  98% (91/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects: 100% (92/92)   [K
+ DEBUG [d88a807e] 	remote: Compressing objects: 100% (92/92), done.[K
+ DEBUG [d88a807e] 	
+ DEBUG [d88a807e] 	Receiving objects:   0% (1/158)   
+ DEBUG [d88a807e] 	Receiving objects:   1% (2/158)   
+ DEBUG [d88a807e] 	Receiving objects:   2% (4/158)   
+ DEBUG [d88a807e] 	Receiving objects:   3% (5/158)   
+ DEBUG [d88a807e] 	Receiving objects:   4% (7/158)   
+ DEBUG [d88a807e] 	Receiving objects:   5% (8/158)   
+ DEBUG [d88a807e] 	Receiving objects:   6% (10/158)   
+ DEBUG [d88a807e] 	Receiving objects:   7% (12/158)   
+ DEBUG [d88a807e] 	Receiving objects:   8% (13/158)   
+ DEBUG [d88a807e] 	Receiving objects:   9% (15/158)   
+ DEBUG [d88a807e] 	Receiving objects:  10% (16/158)   
+ DEBUG [d88a807e] 	Receiving objects:  11% (18/158)   
+ DEBUG [d88a807e] 	Receiving objects:  12% (19/158)   
+ DEBUG [d88a807e] 	Receiving objects:  13% (21/158)   
+ DEBUG [d88a807e] 	Receiving objects:  14% (23/158)   
+ DEBUG [d88a807e] 	Receiving objects:  15% (24/158)   
+ DEBUG [d88a807e] 	Receiving objects:  16% (26/158)   
+ DEBUG [d88a807e] 	Receiving objects:  17% (27/158)   
+ DEBUG [d88a807e] 	Receiving objects:  18% (29/158)   
+ DEBUG [d88a807e] 	Receiving objects:  19% (31/158)   
+ DEBUG [d88a807e] 	Receiving objects:  20% (32/158)   
+ DEBUG [d88a807e] 	Receiving objects:  21% (34/158)   
+ DEBUG [d88a807e] 	Receiving objects:  22% (35/158)   
+ DEBUG [d88a807e] 	Receiving objects:  23% (37/158)   
+ DEBUG [d88a807e] 	Receiving objects:  24% (38/158)   
+ DEBUG [d88a807e] 	Receiving objects:  25% (40/158)   
+ DEBUG [d88a807e] 	Receiving objects:  26% (42/158)   
+ DEBUG [d88a807e] 	Receiving objects:  27% (43/158)   
+ DEBUG [d88a807e] 	Receiving objects:  28% (45/158)   
+ DEBUG [d88a807e] 	Receiving objects:  29% (46/158)   
+ DEBUG [d88a807e] 	Receiving objects:  30% (48/158)   
+ DEBUG [d88a807e] 	Receiving objects:  31% (49/158)   
+ DEBUG [d88a807e] 	Receiving objects:  32% (51/158)   
+ DEBUG [d88a807e] 	Receiving objects:  33% (53/158)   
+ DEBUG [d88a807e] 	Receiving objects:  34% (54/158)   
+ DEBUG [d88a807e] 	Receiving objects:  35% (56/158)   
+ DEBUG [d88a807e] 	Receiving objects:  36% (57/158)   
+ DEBUG [d88a807e] 	Receiving objects:  37% (59/158)   
+ DEBUG [d88a807e] 	Receiving objects:  38% (61/158)   
+ DEBUG [d88a807e] 	Receiving objects:  39% (62/158)   
+ DEBUG [d88a807e] 	Receiving objects:  40% (64/158)   
+ DEBUG [d88a807e] 	Receiving objects:  41% (65/158)   
+ DEBUG [d88a807e] 	Receiving objects:  42% (67/158)   
+ DEBUG [d88a807e] 	Receiving objects:  43% (68/158)   
+ DEBUG [d88a807e] 	Receiving objects:  44% (70/158)   
+ DEBUG [d88a807e] 	Receiving objects:  45% (72/158)   
+ DEBUG [d88a807e] 	Receiving objects:  46% (73/158)   
+ DEBUG [d88a807e] 	remote: Total 158 (delta 46), reused 157 (delta 45), pack-reused 0[K
+ DEBUG [d88a807e] 	
+ DEBUG [d88a807e] 	Receiving objects:  47% (75/158)   
+ DEBUG [d88a807e] 	Receiving objects:  48% (76/158)   
+ DEBUG [d88a807e] 	Receiving objects:  49% (78/158)   
+ DEBUG [d88a807e] 	Receiving objects:  50% (79/158)   
+ DEBUG [d88a807e] 	Receiving objects:  51% (81/158)   
+ DEBUG [d88a807e] 	Receiving objects:  52% (83/158)   
+ DEBUG [d88a807e] 	Receiving objects:  53% (84/158)   
+ DEBUG [d88a807e] 	Receiving objects:  54% (86/158)   
+ DEBUG [d88a807e] 	Receiving objects:  55% (87/158)   
+ DEBUG [d88a807e] 	Receiving objects:  56% (89/158)   
+ DEBUG [d88a807e] 	Receiving objects:  57% (91/158)   
+ DEBUG [d88a807e] 	Receiving objects:  58% (92/158)   
+ DEBUG [d88a807e] 	Receiving objects:  59% (94/158)   
+ DEBUG [d88a807e] 	Receiving objects:  60% (95/158)   
+ DEBUG [d88a807e] 	Receiving objects:  61% (97/158)   
+ DEBUG [d88a807e] 	Receiving objects:  62% (98/158)   
+ DEBUG [d88a807e] 	Receiving objects:  63% (100/158)   
+ DEBUG [d88a807e] 	Receiving objects:  64% (102/158)   
+ DEBUG [d88a807e] 	Receiving objects:  65% (103/158)   
+ DEBUG [d88a807e] 	Receiving objects:  66% (105/158)   
+ DEBUG [d88a807e] 	Receiving objects:  67% (106/158)   
+ DEBUG [d88a807e] 	Receiving objects:  68% (108/158)   
+ DEBUG [d88a807e] 	Receiving objects:  69% (110/158)   
+ DEBUG [d88a807e] 	Receiving objects:  70% (111/158)   
+ DEBUG [d88a807e] 	Receiving objects:  71% (113/158)   
+ DEBUG [d88a807e] 	Receiving objects:  72% (114/158)   
+ DEBUG [d88a807e] 	Receiving objects:  73% (116/158)   
+ DEBUG [d88a807e] 	Receiving objects:  74% (117/158)   
+ DEBUG [d88a807e] 	Receiving objects:  75% (119/158)   
+ DEBUG [d88a807e] 	Receiving objects:  76% (121/158)   
+ DEBUG [d88a807e] 	Receiving objects:  77% (122/158)   
+ DEBUG [d88a807e] 	Receiving objects:  78% (124/158)   
+ DEBUG [d88a807e] 	Receiving objects:  79% (125/158)   
+ DEBUG [d88a807e] 	Receiving objects:  80% (127/158)   
+ DEBUG [d88a807e] 	Receiving objects:  81% (128/158)   
+ DEBUG [d88a807e] 	Receiving objects:  82% (130/158)   
+ DEBUG [d88a807e] 	Receiving objects:  83% (132/158)   
+ DEBUG [d88a807e] 	Receiving objects:  84% (133/158)   
+ DEBUG [d88a807e] 	Receiving objects:  85% (135/158)   
+ DEBUG [d88a807e] 	Receiving objects:  86% (136/158)   
+ DEBUG [d88a807e] 	Receiving objects:  87% (138/158)   
+ DEBUG [d88a807e] 	Receiving objects:  88% (140/158)   
+ DEBUG [d88a807e] 	Receiving objects:  89% (141/158)   
+ DEBUG [d88a807e] 	Receiving objects:  90% (143/158)   
+ DEBUG [d88a807e] 	Receiving objects:  91% (144/158)   
+ DEBUG [d88a807e] 	Receiving objects:  92% (146/158)   
+ DEBUG [d88a807e] 	Receiving objects:  93% (147/158)   
+ DEBUG [d88a807e] 	Receiving objects:  94% (149/158)   
+ DEBUG [d88a807e] 	Receiving objects:  95% (151/158)   
+ DEBUG [d88a807e] 	Receiving objects:  96% (152/158)   
+ DEBUG [d88a807e] 	Receiving objects:  97% (154/158)   
+ DEBUG [d88a807e] 	Receiving objects:  98% (155/158)   
+ DEBUG [d88a807e] 	Receiving objects:  99% (157/158)   
+ DEBUG [d88a807e] 	Receiving objects: 100% (158/158)   
+ DEBUG [d88a807e] 	Receiving objects: 100% (158/158), 443.90 KiB | 0 bytes/s, done.
+ DEBUG [d88a807e] 	
+ DEBUG [d88a807e] 	Resolving deltas:   0% (0/46)   
+ DEBUG [d88a807e] 	Resolving deltas:   2% (1/46)   
+ DEBUG [d88a807e] 	Resolving deltas:   4% (2/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  23% (11/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  26% (12/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  32% (15/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  41% (19/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  43% (20/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  50% (23/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  52% (24/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  58% (27/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  63% (29/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  67% (31/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  69% (32/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  73% (34/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  76% (35/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  80% (37/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  82% (38/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  86% (40/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  89% (41/46)   
+ DEBUG [d88a807e] 	Resolving deltas:  93% (43/46)   
+ DEBUG [d88a807e] 	Resolving deltas: 100% (46/46)   
+ DEBUG [d88a807e] 	Resolving deltas: 100% (46/46), done.
+ DEBUG [d88a807e] 	
+ DEBUG [d88a807e] 	Checking connectivity... 
+ DEBUG [d88a807e] 	done.
+ DEBUG [d88a807e] 	
+  INFO [d88a807e] Finished in 0.458 seconds with exit status 0 (successful).
+ DEBUG [a33ed284] Running if test ! -d /var/app/xmen-site/repo; then echo "Directory does not exist '/var/app/xmen-site/repo'" 1>&2; false; fi as ubuntu@34.193.244.241
+ DEBUG [a33ed284] Command: if test ! -d /var/app/xmen-site/repo; then echo "Directory does not exist '/var/app/xmen-site/repo'" 1>&2; false; fi
+ DEBUG [a33ed284] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [8829b094] Running /usr/bin/env git remote update --prune as ubuntu@34.193.244.241
+ DEBUG [8829b094] Command: cd /var/app/xmen-site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-xmen-site-production-johntaylor.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8829b094] 	Fetching origin
+ DEBUG [8829b094] 	
+  INFO [8829b094] Finished in 0.347 seconds with exit status 0 (successful).
+ DEBUG [212b2d65] Running if test ! -d /var/app/xmen-site/repo; then echo "Directory does not exist '/var/app/xmen-site/repo'" 1>&2; false; fi as ubuntu@34.193.244.241
+ DEBUG [212b2d65] Command: if test ! -d /var/app/xmen-site/repo; then echo "Directory does not exist '/var/app/xmen-site/repo'" 1>&2; false; fi
+ DEBUG [212b2d65] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [977b3f03] Running /usr/bin/env mkdir -p /var/app/xmen-site/releases/20161226145826 as ubuntu@34.193.244.241
+ DEBUG [977b3f03] Command: cd /var/app/xmen-site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-xmen-site-production-johntaylor.sh" ; /usr/bin/env mkdir -p /var/app/xmen-site/releases/20161226145826 )
+  INFO [977b3f03] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [678c2f8a] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/app/xmen-site/releases/20161226145826 as ubuntu@34.193.244.241
+ DEBUG [678c2f8a] Command: cd /var/app/xmen-site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-xmen-site-production-johntaylor.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/app/xmen-site/releases/20161226145826 )
+  INFO [678c2f8a] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [be0c05f5] Running if test ! -d /var/app/xmen-site/repo; then echo "Directory does not exist '/var/app/xmen-site/repo'" 1>&2; false; fi as ubuntu@34.193.244.241
+ DEBUG [be0c05f5] Command: if test ! -d /var/app/xmen-site/repo; then echo "Directory does not exist '/var/app/xmen-site/repo'" 1>&2; false; fi
+ DEBUG [be0c05f5] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [aafaabd7] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@34.193.244.241
+ DEBUG [aafaabd7] Command: cd /var/app/xmen-site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-xmen-site-production-johntaylor.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [aafaabd7] 	6e5f4b1aebdddd86951b5a1c740122ece08e85e3
+ DEBUG [aafaabd7] 	
+ DEBUG [aafaabd7] Finished in 0.071 seconds with exit status 0 (successful).
+ DEBUG [14cb2cab] Running if test ! -d /var/app/xmen-site/releases/20161226145826; then echo "Directory does not exist '/var/app/xmen-site/releases/20161226145826'" 1>&2; false; fi as ubuntu@34.193.244.241
+ DEBUG [14cb2cab] Command: if test ! -d /var/app/xmen-site/releases/20161226145826; then echo "Directory does not exist '/var/app/xmen-site/releases/20161226145826'" 1>&2; false; fi
+ DEBUG [14cb2cab] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [4cbc3232] Running /usr/bin/env echo "6e5f4b1aebdddd86951b5a1c740122ece08e85e3" >> REVISION as ubuntu@34.193.244.241
+ DEBUG [4cbc3232] Command: cd /var/app/xmen-site/releases/20161226145826 && /usr/bin/env echo "6e5f4b1aebdddd86951b5a1c740122ece08e85e3" >> REVISION
+  INFO [4cbc3232] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [02e80181] Running /usr/bin/env ln -s /var/app/xmen-site/releases/20161226145826 /var/app/xmen-site/releases/current as ubuntu@34.193.244.241
+ DEBUG [02e80181] Command: /usr/bin/env ln -s /var/app/xmen-site/releases/20161226145826 /var/app/xmen-site/releases/current
+  INFO [02e80181] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [b4738a3a] Running /usr/bin/env mv /var/app/xmen-site/releases/current /var/app/xmen-site as ubuntu@34.193.244.241
+ DEBUG [b4738a3a] Command: /usr/bin/env mv /var/app/xmen-site/releases/current /var/app/xmen-site
+  INFO [b4738a3a] Finished in 0.071 seconds with exit status 0 (successful).
+ DEBUG [54665d8e] Running if test ! -d /var/app/xmen-site/releases/20161226145826; then echo "Directory does not exist '/var/app/xmen-site/releases/20161226145826'" 1>&2; false; fi as ubuntu@34.193.244.241
+ DEBUG [54665d8e] Command: if test ! -d /var/app/xmen-site/releases/20161226145826; then echo "Directory does not exist '/var/app/xmen-site/releases/20161226145826'" 1>&2; false; fi
+ DEBUG [54665d8e] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [82b67dd4] Running /usr/bin/env npm install as ubuntu@34.193.244.241
+ DEBUG [82b67dd4] Command: cd /var/app/xmen-site/releases/20161226145826 && /usr/bin/env npm install
+ DEBUG [82b67dd4] 	[37m
+ DEBUG [82b67dd4] 	[40m
+ DEBUG [82b67dd4] 	npm
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	[30m
+ DEBUG [82b67dd4] 	[43m
+ DEBUG [82b67dd4] 	WARN
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	[35m
+ DEBUG [82b67dd4] 	package.json
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 xmen@0.0.0 No repository field.
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	[37m
+ DEBUG [82b67dd4] 	[40m
+ DEBUG [82b67dd4] 	npm
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	[30m
+ DEBUG [82b67dd4] 	[43m
+ DEBUG [82b67dd4] 	WARN
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	[35m
+ DEBUG [82b67dd4] 	deprecated
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 swig@1.4.2: This package is no longer maintained
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	[37m
+ DEBUG [82b67dd4] 	[40m
+ DEBUG [82b67dd4] 	npm
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	[30m
+ DEBUG [82b67dd4] 	[43m
+ DEBUG [82b67dd4] 	WARN
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	[35m
+ DEBUG [82b67dd4] 	deprecated
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	[37m
+ DEBUG [82b67dd4] 	[40m
+ DEBUG [82b67dd4] 	npm
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	[30m
+ DEBUG [82b67dd4] 	[43m
+ DEBUG [82b67dd4] 	WARN
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	[35m
+ DEBUG [82b67dd4] 	deprecated
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	[37m
+ DEBUG [82b67dd4] 	[40m
+ DEBUG [82b67dd4] 	npm
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	[30m
+ DEBUG [82b67dd4] 	[43m
+ DEBUG [82b67dd4] 	WARN
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	[35m
+ DEBUG [82b67dd4] 	deprecated
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	 graceful-fs@1.2.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	[0m
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	/[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	\[0G
+ DEBUG [82b67dd4] 	|[0G
+ DEBUG [82b67dd4] 	-[0G
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	> node-sass@4.1.1 install /var/app/xmen-site/releases/20161226145826/node_modules/gulp-sass/node_modules/node-sass
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	> node scripts/install.js
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	Downloading binary from https://github.com/sass/node-sass/releases/download/v4.1.1/linux-x64-46_binding.node
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	Download complete
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	Binary saved to /var/app/xmen-site/releases/20161226145826/node_modules/gulp-sass/node_modules/node-sass/vendor/linux-x64-46/binding.node
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	Caching binary to /home/ubuntu/.npm/node-sass/4.1.1/linux-x64-46_binding.node
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	> node-sass@4.1.1 postinstall /var/app/xmen-site/releases/20161226145826/node_modules/gulp-sass/node_modules/node-sass
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	> node scripts/build.js
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	Binary found at /var/app/xmen-site/releases/20161226145826/node_modules/gulp-sass/node_modules/node-sass/vendor/linux-x64-46/binding.node
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	Testing binary
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	Binary is fine
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	json3@3.3.2 node_modules/json3
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	connect-flash@0.1.1 node_modules/connect-flash
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	underscore@1.8.3 node_modules/underscore
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	cookie-parser@1.4.3 node_modules/cookie-parser
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── cookie-signature@1.0.6
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── cookie@0.3.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	passport-local@1.0.0 node_modules/passport-local
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── passport-strategy@1.0.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	passport@0.3.2 node_modules/passport
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── passport-strategy@1.0.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── pause@0.0.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	method-override@2.3.7 node_modules/method-override
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── methods@1.1.2
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── vary@1.1.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── parseurl@1.3.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── debug@2.3.3 (ms@0.7.2)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	morgan@1.7.0 node_modules/morgan
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── on-headers@1.0.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── basic-auth@1.0.4
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── depd@1.1.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── on-finished@2.3.0 (ee-first@1.1.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── debug@2.2.0 (ms@0.7.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	express-session@1.14.2 node_modules/express-session
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── cookie-signature@1.0.6
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── utils-merge@1.0.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── on-headers@1.0.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── parseurl@1.3.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── cookie@0.3.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── depd@1.1.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── crc@3.4.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── uid-safe@2.1.3 (base64-url@1.3.3, random-bytes@1.0.0)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── debug@2.2.0 (ms@0.7.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	compression@1.6.2 node_modules/compression
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── on-headers@1.0.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── vary@1.1.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── bytes@2.3.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── compressible@2.0.9 (mime-db@1.25.0)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── debug@2.2.0 (ms@0.7.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── accepts@1.3.3 (negotiator@0.6.1, mime-types@2.1.13)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	errorhandler@1.5.0 node_modules/errorhandler
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── escape-html@1.0.3
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── accepts@1.3.3 (negotiator@0.6.1, mime-types@2.1.13)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	body-parser@1.15.2 node_modules/body-parser
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── content-type@1.0.2
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── bytes@2.4.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── depd@1.1.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── qs@6.2.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── on-finished@2.3.0 (ee-first@1.1.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── debug@2.2.0 (ms@0.7.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── raw-body@2.1.7 (unpipe@1.0.0)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── http-errors@1.5.1 (inherits@2.0.3, setprototypeof@1.0.2, statuses@1.3.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── iconv-lite@0.4.13
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── type-is@1.6.14 (media-typer@0.3.0, mime-types@2.1.13)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	gulp-concat@2.6.1 node_modules/gulp-concat
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── vinyl@2.0.1 (replace-ext@1.0.0, is-stream@1.1.0, clone-buffer@1.0.0, remove-trailing-separator@1.0.1, 
+ DEBUG [82b67dd4] 	clone-stats@1.0.0, clone@1.0.2, cloneable-readable@1.0.0)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── concat-with-sourcemaps@1.0.4 (source-map@0.5.6)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── through2@2.0.3 (xtend@4.0.1, readable-stream@2.2.2)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	connect-multiparty@2.0.0 node_modules/connect-multiparty
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── qs@4.0.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── on-finished@2.3.0 (ee-first@1.1.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── type-is@1.6.14 (media-typer@0.3.0, mime-types@2.1.13)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── multiparty@4.1.2 (fd-slicer@1.0.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	express@4.14.0 node_modules/express
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── escape-html@1.0.3
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── utils-merge@1.0.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── cookie-signature@1.0.6
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── methods@1.1.2
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── content-type@1.0.2
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── parseurl@1.3.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── vary@1.1.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── cookie@0.3.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── array-flatten@1.1.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── merge-descriptors@1.0.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── encodeurl@1.0.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── fresh@0.3.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── range-parser@1.2.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── etag@1.7.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── content-disposition@0.5.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── serve-static@1.11.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── path-to-regexp@0.1.7
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── depd@1.1.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── qs@6.2.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── on-finished@2.3.0 (ee-first@1.1.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── finalhandler@0.5.0 (unpipe@1.0.0, statuses@1.3.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── debug@2.2.0 (ms@0.7.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── proxy-addr@1.1.2 (forwarded@0.1.0, ipaddr.js@1.1.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── type-is@1.6.14 (media-typer@0.3.0, mime-types@2.1.13)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── accepts@1.3.3 (negotiator@0.6.1, mime-types@2.1.13)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── send@0.14.1 (destroy@1.0.4, ms@0.7.1, statuses@1.3.1, mime@1.3.4, http-errors@1.5.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	nconf@0.8.4 node_modules/nconf
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── ini@1.3.4
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── secure-keys@1.0.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── async@1.5.2
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── yargs@3.32.0 (decamelize@1.2.0, camelcase@2.1.1, y18n@3.2.1, window-size@0.1.4, cliui@3.2.0, string-width@1.0.2, os-locale@1.4.0)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	swig@1.4.2 node_modules/swig
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── optimist@0.6.1 (wordwrap@0.0.3, minimist@0.0.10)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── uglify-js@2.4.24 (async@0.2.10, uglify-to-browserify@1.0.2, yargs@3.5.4, source-map@0.1.34)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	gulp@3.9.1 node_modules/gulp
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── interpret@1.0.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── pretty-hrtime@1.0.3
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── deprecated@0.0.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── archy@1.0.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── tildify@1.2.0 (os-homedir@1.0.2)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── minimist@1.2.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── v8flags@2.0.11 (user-home
+ DEBUG [82b67dd4] 	@1.1.1)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── semver@4.3.6
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── chalk@1.1.3 (ansi-styles@2.2.1, escape-string-regexp@1.0.5, supports-color@2.0.0, strip-ansi@3.0.1, has-ansi@2.0.0)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── orchestrator@0.3.8 (stream-consume@0.1.0, sequencify@0.0.7, end-of-stream@0.1.5)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── vinyl-fs@0.3.14 (strip-bom@1.0.0, defaults@1.0.3, vinyl@0.4.6, graceful-fs@3.0.11, through2@0.6.5, mkdirp@0.5.1, glob-stream@3.1.18, glob-watcher@0.0.6)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── liftoff@2.3.0 (lodash.isplainobject@4.0.6, lodash.isstring@4.0.1, lodash.mapvalues@4.6.0, rechoir@0.6.2, extend@3.0.0, flagged-respawn@0.3.2, resolve@1.2.0, fined@1.0.2, findup-sync@0.4.3)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── gulp-util@3.0.7 (array-differ@1.0.0, object-assign@3.0.0, beeper@1.1.1, lodash._reescape@3.0.0, lodash._reevaluate@3.0.0, lodash._reinterpolate@3.0.0, array-uniq@1.0.3, replace-ext@0.0.1, has-gulplog@0.1.0, fancy-log@1.2.0, vinyl@0.5.3, gulplog@1.0.0, lodash.template@3.6.2, through2@2.0.3, multipipe@0.1.2, dateformat@1.0.12)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	connect-mongo@1.3.2 node_modules/connect-mongo
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── bluebird@3.4.7
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── mongodb@2.2.16 (es6-promise@3.2.1, readable-stream@2.1.5, mongodb-core@2.1.2)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	mongoose@4.7.4 node_modules/mongoose
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── ms@0.7.2
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── sliced@1.0.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── regexp-clone@0.0.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── hooks-fixed@1.2.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── muri@1.1.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── mpromise@0.5.5
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── kareem@1.1.5
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── mpath@0.2.1
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── bson@0.5.7
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── mquery@2.0.0 (sliced@0.0.5, debug@2.2.0, bluebird@2.10.2)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── mongodb@2.2.16 (es6-promise@3.2.1, readable-stream@2.1.5, mongodb-core@2.1.2)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	moment@2.17.1 node_modules/moment
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	async@2.1.4 node_modules/async
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── lodash@4.17.3
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	gulp-sass@3.0.0 node_modules/gulp-sass
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── lodash.clonedeep@4.5.0
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── vinyl-sourcemaps-apply@0.2.1 (source-map@0.5.6)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── through2@2.0.3 (xtend@4.0.1, readable-stream@2.2.2)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	├── gulp-util@3.0.7 (array-differ@1.0.0, object-assign@3.0.0, array-uniq@1.0.3, beeper@1.1.1, lodash._reescape@3.0.0, lodash._reevaluate@3.0.0, lodash._reinterpolate@3.0.0, replace-ext@0.0.1, has-gulplog@0.1.0, fancy-log@1.2.0, minimist@1.2.0, v
+ DEBUG [82b67dd4] 	inyl@0.5.3, chalk@1.1.3, lodash.template@3.6.2, gulplog@1.0.0, multipipe@0.1.2, dateformat@1.0.12)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	└── node-sass@4.1.1 (get-stdin@4.0.1, lodash.assign@4.2.0, lodash.mergewith@4.6.0, async-foreach@0.1.3, in-publish@2.0.0, chalk@1.1.3, nan@2.5.0, mkdirp@0.5.1, cross-spawn@3.0.1, stdout-stream@1.4.0, glob@7.1.1, npmlog@4.0.2, meow@3.7.0, request@2.79.0, node-gyp@3.4.0, sass-graph@2.1.2, gaze@1.1.2)
+ DEBUG [82b67dd4] 	
+ DEBUG [82b67dd4] 	[2K
+  INFO [82b67dd4] Finished in 25.892 seconds with exit status 0 (successful).
+  INFO [096527ec] Running /usr/bin/env bower install as ubuntu@34.193.244.241
+ DEBUG [096527ec] Command: cd /var/app/xmen-site/releases/20161226145826 && /usr/bin/env bower install
+ DEBUG [096527ec] 	bower [36mnot-cached   [39m https://github.com/FortAwesome/Font-Awesome.git#~4.3.0
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mresolve      [39m https://github.com/FortAwesome/Font-Awesome.git#~4.3.0
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mnot-cached   [39m https://github.com/thoughtbot/bourbon.git#~4.2.1
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mresolve      [39m https://github.com/thoughtbot/bourbon.git#~4.2.1
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mnot-cached   [39m https://github.com/thoughtbot/neat.git#~1.7.2
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mresolve      [39m https://github.com/thoughtbot/neat.git#~1.7.2
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mdownload     [39m https://github.com/thoughtbot/neat/archive/v1.7.4.tar.gz
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mdownload     [39m https://github.com/thoughtbot/bourbon/archive/v4.2.7.tar.gz
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mdownload     [39m https://github.com/FortAwesome/Font-Awesome/archive/v4.3.0.tar.gz
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mextract      [39m bourbon#~4.2.1 archive.tar.gz
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mextract      [39m neat#~1.7.2 archive.tar.gz
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mextract      [39m font-awesome#~4.3.0 archive.tar.gz
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mresolved     [39m https://github.com/thoughtbot/neat.git#1.7.4
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mnot-cached   [39m https://github.com/thoughtbot/bourbon.git#>=4.0
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mresolve      [39m https://github.com/thoughtbot/bourbon.git#>=4.0
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mdownload     [39m https://github.com/thoughtbot/bourbon/archive/v4.2.7.tar.gz
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mextract      [39m bourbon#>=4.0 archive.tar.gz
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mresolved     [39m https://github.com/thoughtbot/bourbon.git#4.2.7
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mresolved     [39m https://github.com/thoughtbot/bourbon.git#4.2.7
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [33minvalid-meta [39m for:/tmp/ubuntu/bower/32b121f1e564c015b458c30a6337ac1b-22959-2EjNlJ/bower.json
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [33minvalid-meta [39m The "main" field cannot contain globs (example: "*.js")
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36mresolved     [39m https://github.com/FortAwesome/Font-Awesome.git#4.3.0
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36minstall      [39m neat#1.7.4
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36minstall      [39m bourbon#4.2.7
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bower [36minstall      [39m font-awesome#4.3.0
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	neat#1.7.4 public/lib/neat
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	└── bourbon#4.2.7
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	bourbon#4.2.7 public/lib/bourbon
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	
+ DEBUG [096527ec] 	font-awesome#4.3.0 public/lib/font-awesome
+ DEBUG [096527ec] 	
+  INFO [096527ec] Finished in 3.852 seconds with exit status 0 (successful).
+  INFO [e207ded3] Running /usr/bin/env gulp build as ubuntu@34.193.244.241
+ DEBUG [e207ded3] Command: cd /var/app/xmen-site/releases/20161226145826 && /usr/bin/env gulp build
+ DEBUG [e207ded3] 	[[90m14:58:58[39m] 
+ DEBUG [e207ded3] 	Using gulpfile [35m/var/app/xmen-site/releases/20161226145826/gulpfile.js[39m
+ DEBUG [e207ded3] 	
+ DEBUG [e207ded3] 	[[90m14:58:58[39m] 
+ DEBUG [e207ded3] 	[31mTask 'build' is not in your gulpfile[39m
+ DEBUG [e207ded3] 	
+ DEBUG [e207ded3] 	[[90m14:58:58[39m] 
+ DEBUG [e207ded3] 	Please check the documentation for proper gulpfile formatting
+ DEBUG [e207ded3] 	

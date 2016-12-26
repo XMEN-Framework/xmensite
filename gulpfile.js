@@ -31,6 +31,8 @@ gulp.task('watch', function() {
 	gulp.watch('public/scss/**/*.scss', ['sass']);
 });
 
+gulp.task('build', ['sass', 'copyfonts']);
+
 
 //Default task
 gulp.task('default', ['sass', 'copyfonts', 'watch']);

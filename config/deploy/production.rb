@@ -31,7 +31,7 @@ server "34.193.244.241", :user => "ubuntu", :roles => %{web app}
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
-
+server "34.193.244.241", :user => "ubuntu", :roles => %{app}
 
 # Custom SSH Options
 # ==================

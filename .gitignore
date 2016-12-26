@@ -9,6 +9,7 @@ public/build
 
 /* Git files */
 .orig
+log/
 
 /* OSX */
 .DS_Store
